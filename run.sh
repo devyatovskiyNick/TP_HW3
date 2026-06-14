@@ -16,11 +16,11 @@ elif [ "$1" = "run_reporter" ]; then
   docker run -v "./data:/data" reporter
 
 elif [ "$1" = "structure" ]; then
-  tree /F
+  tree 
 
 elif [ "$1" = "clear_data" ]; then
-  rm data/*.csv
-  rm data/*.html
+  sudo rm data/*.csv
+  sudo rm data/*.html
 
 elif [ "$1" = "inside_generator" ]; then
   docker run -v "./data:/data" generator
